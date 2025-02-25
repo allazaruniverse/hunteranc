@@ -1,0 +1,352 @@
+/* General Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background:  black;
+ 
+}
+
+.auth-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffd700; /* gold for the sans serif in the login and reg pages*/
+}
+
+body.playbooks-page {
+    position: relative;
+    color: #ffffff;
+}
+
+body.playbooks-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/images/SSOA map sticker.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2; /* Adjust opacity here, 0.2 is lower than 0.5 */
+    z-index: -1; /* Ensures the background stays behind content */
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem
+}
+
+header h1 {
+    color: #ffd700; /* Turns Shaman States RPG text to gold */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    background-image: url('/images/ai_ssoa_rpg_cover.jpeg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    padding: 2rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+
+.hero h2 {
+    font-size: 2.5rem;
+    
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 03%;
+}
+
+/* Adjust Hero Section Placement */
+.hero {
+    height: 60vh; /* slightly lower */
+    padding-top: 5vh; /* moves content lower */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: #222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.feature-box h3 {
+    color: #ffd700;
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    margin-bottom: 1.5rem;
+        color: #ffd700; /* gold */
+}
+
+.feature-box input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.feature-box .btn {
+    width: 75%;
+    cursor: pointer;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffd700;
+    color: #222;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0.5rem;
+}
+
+.btn-secondary {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Authentication Forms */
+.auth-container {
+    max-width: 400px;
+    margin: 10vh auto;
+    padding: 2rem;
+    background: #222;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 1rem;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container label {
+    text-align: left;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.auth-container input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-container .btn {
+    width: 100%;
+}
+
+
+/* Playbook Grid Styles */
+.playbook-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* explicitly two columns */
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.playbook-tile {
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    text-align: center;
+    color: #fff;
+}
+
+.playbook-tile img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.playbook-tile h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.playbook-tile h3 a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.playbook-tile h3 a:hover {
+    color: #ff4500;
+}
+
+.playbook-tile p {
+    padding: 0 1rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Section Banners */
+.banner {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffd700;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #ff4500; /* This goes nicely with the gold */
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Dropdown button */
+.dropdown .btn {
+    background-color: #ffd700;
+    color: #222;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+}
+
+/* Dropdown menu -  ABOVE the button */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    text-align: left;
+    padding: 5px 0;
+
+    /* Position ABOVE the button */
+    bottom: 110%;
+    border-radius: 8px;
+}
+
+/* Make sure links are easy to click */
+.dropdown-content li {
+    display: block;
+    padding: 8px 12px;
+}
+
+.dropdown-content a {
+    color: #ffd700;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
